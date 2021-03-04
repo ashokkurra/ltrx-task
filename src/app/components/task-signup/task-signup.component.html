@@ -1,0 +1,33 @@
+<div class="task-login-container">
+    <form class="task-login-form" [formGroup]="signupForm" (ngSubmit)="onSignupSubmit()" *ngIf="isSignUp else verify">
+        <img class="brand" src="../../../assets/brand.svg" />
+        <div class="task-form-content">
+            <div class="task-form-group">
+                <label>Username</label>
+                <input type="text" formControlName="email" class="form-control input-lg" />
+            </div>
+            <div class="task-form-group">
+                <label>New Password</label>
+                <input type="password" formControlName="password" class="form-control input-lg" />
+            </div>
+            <div class="task-form-group">
+                <label>Reenter Password</label>
+                <input type="password" formControlName="password2" class="form-control input-lg" />
+            </div>
+            <button class="stretched" type="submit">Signup</button>
+        </div>
+    </form>
+</div>
+<ng-template #verify>
+    <form class="task-login-form"  [formGroup]="verifyForm" (ngSubmit)="onVerifySubmit()">
+        <img class="brand" src="../../../assets/brand.svg" />
+        <h6>{{message}}</h6>
+        <div class="task-form-content">
+            <div class="task-form-group">
+                <label>Verification Code</label>
+                <input type="text" formControlName="otp" class="form-control input-lg" />
+            </div>
+            <button class="stretched" type="submit">Complete Signup</button>
+        </div>
+    </form>
+</ng-template>

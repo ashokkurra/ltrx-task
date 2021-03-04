@@ -1,0 +1,81 @@
+body {
+	margin: 0px;
+	font-family: sans-serif;
+}
+
+button{
+    height: 32px;
+    background-color: #104163;
+    color: white;
+    border-radius: 16px;
+    font-size: 0.875rem;
+    letter-spacing: 0.0892857143em;
+    padding: 0 8px;
+    min-width: 64px;
+    border: none;
+    outline: none;
+    cursor: pointer;    
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+    &:active {
+        box-shadow: 0 2px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+        transform: translateY(1px);
+    }
+	&.stretched {
+		width: 80%;
+		margin: 15px auto;
+	}
+}
+
+.task-bar {
+	display: flex;
+	position: relative;
+	height: 64px;
+	background-color: #0d283b;
+	color: #fff;
+	.task-bar-section {
+		display: inline-flex;
+		flex: 1 1 auto;
+		align-items: center;
+		min-width: 0;
+		padding: 8px 12px;
+		z-index: 1;
+		&.section-start {
+			justify-content: flex-start;
+			order: -1;
+		}
+		&.section-end {
+			justify-content: flex-end;
+			order: 1;
+		}
+		.task-bar-title {
+			font-size: 1.25rem;
+			padding-left: 20px;
+		}
+	}
+}
+
+.task-form-group {
+	position: relative;
+	width: 250px;
+	padding: 15px 10px 5px;
+	height: 32px;
+	margin: 15px 0px;
+	border-bottom: 1px solid #999;
+	border-radius: 4px;
+	background-color: #e6f0f7;
+  & > label {
+    position: absolute;
+    top: 5px;
+    font-size: 11px;
+    color: #999999;
+    left: 10px;
+  }
+  & > input {
+    height: 32px;
+    border: none;
+    font-size: 16px;
+    outline: none;
+    background-color: #e6f0f7;
+    width: 100%;
+  }
+}

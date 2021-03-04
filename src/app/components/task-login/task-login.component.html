@@ -1,0 +1,19 @@
+<div class="task-login-container">
+  <form class="task-login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+    <img class="brand" src="../../../assets/brand.svg" />
+    <div class="task-form-content">
+      <div class="task-form-group">
+        <label>Username</label>
+        <input type="text" formControlName="email" class="form-control input-lg" />
+      </div>
+      <div class="task-form-group">
+        <label>Password</label>
+        <input type="password" formControlName="password" class="form-control input-lg" />
+      </div>
+      <button class="stretched" type="submit">Login</button>
+      <div class="signup-link">
+        <a [routerLink]="['/signup']">Sign Up</a>
+      </div>
+    </div>
+  </form>
+</div>

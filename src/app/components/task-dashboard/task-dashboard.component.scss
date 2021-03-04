@@ -1,0 +1,24 @@
+.task-container {
+    display: flex;
+    padding: 50px;
+    flex-direction: column;
+    .task-list{
+        display: flex;        
+        padding: 10px;
+        .task-list-column {            
+            &:first-child {
+                width: 30%;
+            }
+            &.form-spacing{
+                padding:15px 0px;
+            }
+        }
+        &.border-line{
+            padding: 20px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+    }
+    .task-form-group{
+        margin: 0px;
+    }
+}
